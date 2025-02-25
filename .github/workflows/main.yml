@@ -21,9 +21,11 @@ jobs:
           node-version: 20
 
       - name: Install dependencies
+        working-directory: frontend
         run: npm install
 
       - name: Run tests
+        working-directory: frontend
         run: npm run test
 
   build-and-push:
